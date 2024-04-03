@@ -1,0 +1,4191 @@
+openapi: "3.0.1"
+info:
+  title: "Clone from BPER-API-Gateway-Adoption-private-test"
+  description: "BPER-API-Gateway-Adoption--private-test"
+  version: "6.5"
+servers:
+- url: "https://bl0a9w8373.execute-api.eu-south-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "test"
+paths:
+  /crm/api/crm/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /crm/api/banche/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:83/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /conticorrenti/api/v3/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /conticorrenti/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /documentsgenerationengine/api/{v1+}:
+    options:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.v1"
+          integration.request.path.v1: "method.request.path.v1"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /fatca/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /gestionefinanza/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /dominiconticorrenti/api/{v1+}:
+    options:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.v1"
+          integration.request.path.v1: "method.request.path.v1"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /hda/api/{v1+}:
+    options:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.v1"
+          integration.request.path.v1: "method.request.path.v1"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /multicanalita/api/{v1+}:
+    options:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.v1"
+          integration.request.path.v1: "method.request.path.v1"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /kopernico/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /mandati/api/{v1+}:
+    options:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.v1"
+          integration.request.path.v1: "method.request.path.v1"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /gianos/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /rpagestioneprocessi/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /schedaprivati/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /verificacliente/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /portafogliazione/api/{v1+}:
+    options:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "v1"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.v1"
+          integration.request.path.v1: "method.request.path.v1"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /unitaorganizzative/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /datagovernancehub/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /gestionecontattiocs/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /normalizzatore/api/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /clickToCall/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /rapporti/api/v4/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafeclienti/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafeclienti/api/v4/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafeclienti/api/v6/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anrcm108/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /bhelpservice/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /organizationalunit/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /bffe-pbo/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /antifrode/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /gestioneCertificati/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /sca/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /multicsca/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /notifiche/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafeGenerale/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /pricelab/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /finanziamenti/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /carte/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /configurazioniOfm/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /portaf/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:83/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anrcm018/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafecollegamentiapi/v3/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /cartehomebanking/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /consulenzaportafoglio/api/v2/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /callbackws/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /contactcentercarte/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /contactcenter/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /dochub/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /creditidifirma/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /feaotp/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /fondi/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /riskmanagementclustering/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /polizze/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /robot4advisory/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:82/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /bv_v_n20_test_denodo/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /cassa/api/v1/{v1+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /otpservice/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /cxstudio/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /condizioniere/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /memoClienteNec/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafeRapporti/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /verificaCondizioniTol/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /invoke/{wmserverping+}:
+    options:
+      parameters:
+      - name: "wmserverping"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "wmserverping"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:80/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.wmserverping"
+          integration.request.path.wmserverping: "method.request.path.wmserverping"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /rataInConto/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /anagrafeUnipolMove/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /backoffice/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /operativitaSmartweb/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /rubricavoip/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /gestorewizard/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:81/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /dominianagrafe/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /gestioneperizie/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+  /fidi/api/v1/{proxy+}:
+    options:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Empty"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+        type: "mock"
+    x-amazon-apigateway-any-method:
+      parameters:
+      - name: "proxy"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        connectionId: "mpjx4z"
+        httpMethod: "ANY"
+        uri: "http://BPER-crm-vpc-link-nlb-fe0020ab6ded6248.elb.eu-south-1.amazonaws.com:8080/{proxyintegration}"
+        responses:
+          default:
+            statusCode: "200"
+        requestParameters:
+          integration.request.path.proxyintegration: "method.request.path.proxy"
+          integration.request.path.proxy: "method.request.path.proxy"
+        passthroughBehavior: "when_no_match"
+        connectionType: "VPC_LINK"
+        type: "http_proxy"
+components:
+  schemas:
+    Empty:
+      title: "Empty Schema"
+      type: "object"
+x-amazon-apigateway-policy:
+  Version: "2012-10-17"
+  Statement:
+  - Effect: "Allow"
+    Principal: "*"
+    Action: "execute-api:Invoke"
+    Resource: "arn:aws:execute-api:eu-south-1:485634508432:*/*"
+  - Effect: "Deny"
+    Principal: "*"
+    Action: "execute-api:Invoke"
+    Resource: "arn:aws:execute-api:eu-south-1:485634508432:*/*"
+    Condition:
+      StringNotEquals:
+        aws:SourceVpce: "vpce-01db4940291b5aa00"
